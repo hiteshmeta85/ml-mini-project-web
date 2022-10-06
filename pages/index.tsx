@@ -1,5 +1,6 @@
 import type {NextPage} from 'next'
 import Link from "next/link";
+import {disasters} from "../constants/disasters";
 
 interface Props {
   title: string,
@@ -10,7 +11,7 @@ const Card = (props: Props) => {
   const {title, value} = props
 
   return (
-    <div className={'cursor-pointer text-center text-xl p-12 bg-[#2D3039] rounded-lg transition-all duration-200 hover:scale-105'}>
+    <div className={'border border-2 border-transparent hover:border-white cursor-pointer text-center text-xl p-12 bg-[#2D3039] rounded-lg transition-all duration-200 hover:scale-105'}>
       <p>{title}</p>
     </div>
   )
@@ -27,12 +28,13 @@ const Home: NextPage = () => {
         </div>
         <div className={'h-screen text-center'}>
           <div className={'text-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'}>
-            <div className={'my-4'}>Select Disaster Type</div>
-            <div className={'grid grid-cols-2 gap-4'}>
-              <Card title={'Flood'} value={'flood'}/>
-              <Card title={'Earthquake'} value={'earthquake'}/>
-              <Card title={'Landslide'} value={'landslide'}/>
-              <Card title={'Forest Fire'} value={'fire'}/>
+            <div className={'mb-4'}>Select Disaster Type</div>
+            <div className={'grid grid-cols-3 gap-4'}>
+              {disasters.map((item, index)=> {
+                return (
+                  <Card key={index} title={item.title} value={item.value}/>
+                )
+              })}
             </div>
           </div>
         </div>
