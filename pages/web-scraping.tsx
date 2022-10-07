@@ -16,7 +16,7 @@ const WebScraping: NextPage<Props> = ({data, batchId}) => {
     <div className={'bg-[#1F2028] text-white min-h-screen'}>
       <div className={'max-w-screen-2xl mx-auto pb-8'}>
         <p onClick={() => Router.push({pathname: '/binary-classification', query: {batchId: batchId}})}
-          className={'p-4 text-right'}>Binary Classification &#8594;</p>
+          className={'p-4 text-right cursor-pointer'}>Binary Classification &#8594;</p>
         <div className={'px-4 flex justify-center flex-col gap-4'}>
           <p className={'self-center'}>Raw Data</p>
           <div className={'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'}>
