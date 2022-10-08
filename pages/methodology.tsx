@@ -25,14 +25,14 @@ const Card = (props: Props) => {
 const Methodology = () => {
   return (
     <div className={'bg-[#1F2028] text-white'}>
-      <div className={'max-w-screen-2xl relative mx-auto px-4 lg:px-8'}>
-        <div className={'text-right p-4 absolute top-0 right-0 z-10'}>
+      <div className={'max-w-screen-2xl relative mx-auto'}>
+        <div className={'text-right px-8 py-4 absolute top-0 right-0 z-10'}>
           <Link href={'/'} passHref>
             <a>&#8592; Home</a>
           </Link>
         </div>
-        <div className={'min-h-screen flex justify-center items-center flex-col'}>
-          <p className={'p-4 text-center my-4 text-xl'}>Methodology</p>
+        <div className={'min-h-screen flex justify-center items-center flex-col px-4 lg:px-8 py-8'}>
+          <p className={'text-center my-4 text-xl'}>Methodology</p>
           <div className={'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'}>
             <Card icon={<BsGlobe size={'2rem'}/>} title={'Web Scrapping'} description={'Twint is an advanced Twitter scraping tool written in Python that allows for scraping Tweets from Twitter profiles without using Twitter\'s API'}/>
             <Card icon={<AiOutlineFieldBinary size={'2rem'}/>} title={'Binary Classification'} description={'BERT is a very good pre-trained language model which helps machines learn excellent representations of text wrt context in many natural language tasks'}/>

@@ -24,9 +24,12 @@ const Home: NextPage = () => {
   return (
     <div className={'bg-[#1F2028] text-white'}>
       <div className={'max-w-screen-2xl relative mx-auto'}>
-        <div className={'text-right p-4 absolute top-0 right-0 z-10'}>
+        <div className={'flex gap-4 text-right p-4 absolute top-0 right-0 z-10'}>
+          <Link href={'/about'} passHref>
+            <a>About &#8594;</a>
+          </Link>
           <Link href={'/methodology'} passHref>
-            <a>Methodology</a>
+            <a>Methodology &#8594;</a>
           </Link>
         </div>
         <div className={'min-h-screen flex items-center justify-center flex-col text-center py-16 lg:py-0 text-xl'}>

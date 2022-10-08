@@ -4,6 +4,7 @@ import TweetCard from "../components/Cards/TweetCard";
 import axios from "axios";
 import React from "react";
 import moment from "moment";
+import Link from "next/link";
 
 interface Props {
   data: Tweet[] | []
@@ -14,7 +15,12 @@ const BinaryClassification: NextPage<Props> = ({data, batchId}) => {
 
   return (
     <div className={'bg-[#1F2028] text-white min-h-screen'}>
-      <div className={'max-w-screen-2xl mx-auto pb-8'}>
+      <div className={'max-w-screen-2xl mx-auto pb-8 relative'}>
+        <div className={'text-right p-4 absolute top-0 right-0 z-10'}>
+          <Link href={'/'} passHref>
+            <a>&#8592; Home</a>
+          </Link>
+        </div>
         <p className={'p-4 text-center'}>Binary Classification</p>
         <div className={'p-4 flex justify-center flex-col gap-8'}>
           <div>
@@ -33,7 +39,7 @@ const BinaryClassification: NextPage<Props> = ({data, batchId}) => {
             <div className={'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'}>
               {data.filter((item)=> item.prediction !== 1).map((item, index) => {
                 return (
-                  <TweetCard key={index} username={item.username} date={item.created_at} link={item.link} tweet={item.tweet}/>
+                  <TweetCard key={index} username={item.username} date={moment(item.created_at).format('LL')} link={item.link} tweet={item.tweet}/>
                 )
               })}
             </div>
