@@ -35,12 +35,12 @@ const WebScraping: NextPage<Props> = ({data, batchId}) => {
 export default WebScraping;
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const {query: {hashtag}} = context
+  const {query: {hashtags}} = context
   let data = []
   let batchId = null
 
   try {
-    const res = await axios.post(`${process.env.NEXT_PUBLIC_API_HOST}/v0/api/twitter`, {hashtags: [`${hashtag}`]})
+    const res = await axios.post(`${process.env.NEXT_PUBLIC_API_HOST}/v0/api/twitter`, {hashtags: hashtags})
     if (res.data) {
       data = res.data.data.twitterData
       batchId = res.data.data.batch

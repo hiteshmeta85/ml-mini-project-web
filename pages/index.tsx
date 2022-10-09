@@ -12,7 +12,7 @@ const Card = (props: Props) => {
   const {title, value} = props
 
   return (
-    <div onClick={() => Router.push({pathname: '/web-scraping', query: {hashtag: value}})}
+    <div onClick={() => Router.push({pathname: '/web-scraping', query: {hashtags: [`${value}`, 'rescue', 'disaster']}})}
          className={'border border-2 border-transparent hover:border-white cursor-pointer text-center text-xl px-6 py-8 md:p-12 bg-[#2D3039] rounded-lg transition-all duration-200 hover:scale-105'}>
       <p>{title}</p>
     </div>

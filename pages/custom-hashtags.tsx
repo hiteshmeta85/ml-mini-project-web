@@ -1,6 +1,7 @@
 import {Formik, Field, Form, FieldArray} from "formik";
 import Link from "next/link";
 import {AiOutlineCloseCircle} from "react-icons/ai";
+import Router from "next/router";
 
 const CustomHashtags = () => (
   <div className={'bg-[#1F2028] text-white'}>
@@ -16,7 +17,10 @@ const CustomHashtags = () => (
             hashtags: ['help', 'emergency', 'rescue'],
           }}
           onSubmit={values => {
-            console.log(values.hashtags.filter((items)=> items.length !== 0))
+            Router.push({
+              pathname: '/web-scraping',
+              query: {hashtags: values.hashtags.filter((items) => items.length !== 0)}
+            })
           }}
         >
           {({
