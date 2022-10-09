@@ -27,7 +27,7 @@ const CustomHashtags = () => (
               values,
               handleReset,
             }) => (
-            <Form>
+            <Form className={'md:min-w-[350px]'}>
               <FieldArray
                 name="hashtags"
                 render={arrayHelpers => (
@@ -36,7 +36,7 @@ const CustomHashtags = () => (
                       <button
                         onClick={(event) => {
                           event.preventDefault()
-                          arrayHelpers.form.values.hashtags[0].trim().length > 0 && arrayHelpers.insert(0, '')
+                          arrayHelpers.form.values.hashtags.length > 0 ? arrayHelpers.form.values.hashtags[0].trim().length > 0 && arrayHelpers.insert(0, '') : arrayHelpers.insert(0, '')
                         }}
                         className={'px-4 py-2 text-center w-full border border-2 rounded-lg transition-all duration-200 hover:scale-105'}
                       >
@@ -51,7 +51,7 @@ const CustomHashtags = () => (
                             name={`hashtags.${index}`}
                             autoComplete="off"
                             placeholder={"Type a hashtag..."}
-                            className={'bg-transparent outline-0 md:min-w-[350px]'}
+                            className={'bg-transparent outline-0 w-full'}
                           />
                           <button
                             onClick={(event) => {

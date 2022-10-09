@@ -25,6 +25,9 @@ const Home: NextPage = () => {
     <div className={'bg-[#1F2028] text-white'}>
       <div className={'max-w-screen-2xl relative mx-auto'}>
         <div className={'flex gap-4 text-right p-4 absolute top-0 right-0 z-10'}>
+          <Link href={'/custom-hashtags'} passHref>
+            <a>Custom Hashtags &#8594;</a>
+          </Link>
           <Link href={'/about'} passHref>
             <a>About &#8594;</a>
           </Link>
