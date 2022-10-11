@@ -17,10 +17,12 @@ const CustomHashtags = () => (
             hashtags: ['help', 'emergency', 'rescue'],
           }}
           onSubmit={values => {
-            Router.push({
-              pathname: '/web-scraping',
-              query: {hashtags: values.hashtags.filter((items) => items.length !== 0)}
-            })
+            if(values.hashtags.length > 0){
+              Router.push({
+                pathname: '/web-scraping',
+                query: {hashtags: values.hashtags.filter((items) => items.length !== 0)}
+              })
+            }
           }}
         >
           {({
