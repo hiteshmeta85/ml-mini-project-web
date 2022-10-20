@@ -1,6 +1,6 @@
 # Machine Learning Mini Project
 
-## Undergrad CSE: Sem V
+### Undergrad CSE: Sem V
 
 ### Classification of Disaster related Tweets from Social Media
 
@@ -52,12 +52,21 @@ npm run dev
 ### Sample Images
 
 1. Select Disaster Type
+
    ![](public/sample-images/index.png)
+   
 2. Enter Custom Hashtags
+
    ![](public/sample-images/custom-hashtags.png)
+   
 3. Raw Data scraped from Twitter using Twint
+
    ![](public/sample-images/raw-data.png)
+   
 4. Binary Classified Data using BERT Model
+
    ![](public/sample-images/binary-classified-data.png)
+   
 5. BERT model flow for Binary Classification of Text
+
    ![](public/sample-images/model-flow.png)
