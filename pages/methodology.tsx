@@ -3,6 +3,8 @@ import {BsGlobe} from "react-icons/bs";
 import {AiOutlineFieldBinary} from "react-icons/ai";
 import {MdOutlineWebAsset, MdStorage} from "react-icons/md";
 import Link from "next/link";
+import BertFlow from "../public/bert-flow.png"
+import Image from "next/image";
 
 interface Props {
   icon: any
@@ -39,6 +41,10 @@ const Methodology = () => {
             <Card icon={<MdStorage size={'2rem'}/>} title={'Database'} description={'SQLite is an in-process library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.'}/>
             <Card icon={<MdOutlineWebAsset size={'2rem'}/>} title={'Web Application'} description={'Next.js is an open-source web development framework created by Vercel enabling React-based web applications with server-side rendering and generating static websites.'}/>
           </div>
+        </div>
+        <div className={'pb-32 mx-auto px-12'}>
+          <p className={'text-center text-xl mb-4'}>BERT for Binary Text Classification</p>
+          <Image src={BertFlow} alt={'Bert Flow Image'}/>
         </div>
       </div>
     </div>
